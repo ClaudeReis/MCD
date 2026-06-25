@@ -1,0 +1,20 @@
+# ─── Materiais internos do projeto — NÃO publicar ───
+# Áudios de briefing
+Audios contexto/
+*.oga
+
+# Estudo de mercado e estratégia (preços/concorrência internos)
+Oportunidades e Estudo de mercado/
+
+# Documentos de marca / design source
+*.pptx
+*.docx
+*.pdf
+*.png
+logo-concepts-mdc.html
+Design System MDC Solucoes Eletricas.md
+
+# Sistema operacional
+Thumbs.db
+.DS_Store
+desktop.ini
