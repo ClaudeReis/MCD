@@ -205,8 +205,8 @@ section{position:relative}
   min-height:48px;line-height:1;
 }
 .btn svg{width:19px;height:19px;flex:none}
-.btn-primary{background:var(--blue);color:#fff;box-shadow:0 8px 24px -10px rgba(0,87,184,.7)}
-.btn-primary:hover{background:var(--cyan);transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(0,174,239,.55)}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 6px 16px -8px rgba(0,0,0,.55)}
+.btn-primary:hover{background:var(--cyan);transform:translateY(-2px);box-shadow:0 10px 22px -10px rgba(0,0,0,.6)}
 .btn-ghost{background:transparent;border-color:var(--cyan);color:var(--white)}
 .btn-ghost:hover{background:rgba(0,174,239,.1);transform:translateY(-2px)}
 .btn-amber{background:var(--amber);color:var(--navy)}
@@ -271,7 +271,7 @@ header.scrolled{background:rgba(7,28,44,.82);backdrop-filter:blur(14px);border-b
 .hero-quick .qi{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:11px;background:rgba(0,174,239,.1);border:1px solid var(--line-soft)}
 .hero-quick .qi svg{width:21px;height:21px;stroke:var(--cyan);fill:none;stroke-width:1.6}
 /* barra de confiança */
-.hero-trust{position:relative;z-index:2;border-top:1px solid var(--line);background:linear-gradient(rgba(7,28,44,0),rgba(7,28,44,.45))}
+.hero-trust{position:relative;z-index:2;border-top:1px solid var(--line);background:linear-gradient(180deg,rgba(7,28,44,.42),rgba(7,28,44,.92));backdrop-filter:blur(2px)}
 .hero-trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:18px 0}
 .hero-trust-item{display:flex;align-items:center;gap:12px;position:relative}
 .hero-trust-item+.hero-trust-item::before{content:"";position:absolute;left:-8px;top:3px;bottom:3px;width:1px;background:var(--line-soft)}
@@ -305,7 +305,9 @@ header.scrolled{background:rgba(7,28,44,.82);backdrop-filter:blur(14px);border-b
   position:relative;padding:28px 26px 26px;border-radius:var(--r-md);
   background:var(--card-2);border:1px solid var(--line-soft);overflow:hidden;
   transition:border-color .35s,transform .35s,box-shadow .35s;
+  scroll-margin-top:96px;
 }
+.svc:target{border-color:var(--cyan);box-shadow:0 24px 50px -28px rgba(0,174,239,.4)}
 .svc::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:0;transition:opacity .35s}
 .svc:hover{transform:translateY(-4px);border-color:var(--line);box-shadow:0 24px 50px -28px rgba(0,174,239,.4)}
 .svc:hover::before{opacity:1}
@@ -543,10 +545,10 @@ footer{border-top:1px solid var(--line-soft);background:var(--card-2);padding:cl
           </a>
         </div>
         <nav class="hero-quick" aria-label="Atalhos de serviços">
-          <a href="#servicos"><span class="qi"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg></span>Instalações</a>
-          <a href="#servicos"><span class="qi"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg></span>Manutenções</a>
-          <a href="#servicos"><span class="qi"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h4"/></svg></span>Painéis<br>elétricos</a>
-          <a href="#servicos"><span class="qi"><svg viewBox="0 0 24 24"><path d="M4 12l8-7 8 7M6 11v8h12v-8"/><path d="M10 16.4a3 3 0 014 0M12 19h.01"/></svg></span>Automação<br>residencial</a>
+          <a href="#svc-instalacoes"><span class="qi"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg></span>Instalações</a>
+          <a href="#svc-manutencao"><span class="qi"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg></span>Manutenções</a>
+          <a href="#svc-paineis"><span class="qi"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h4"/></svg></span>Painéis<br>elétricos</a>
+          <a href="#svc-automacao"><span class="qi"><svg viewBox="0 0 24 24"><path d="M4 12l8-7 8 7M6 11v8h12v-8"/><path d="M10 16.4a3 3 0 014 0M12 19h.01"/></svg></span>Automação<br>residencial</a>
         </nav>
       </div>
     </div>
@@ -622,7 +624,7 @@ footer{border-top:1px solid var(--line-soft);background:var(--card-2);padding:cl
       <p>Do dimensionamento à entrega, cada serviço é executado com análise técnica, segurança e orçamento claro.</p>
     </div>
     <div class="svc-grid">
-      <article class="svc reveal"><span class="idx mono">01</span>
+      <article class="svc reveal" id="svc-instalacoes"><span class="idx mono">01</span>
         <span class="svc-ic"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg></span>
         <h3>Instalações elétricas novas</h3><p>Projeto e execução para novas estruturas residenciais, comerciais e empresariais.</p>
       </article>
@@ -630,7 +632,7 @@ footer{border-top:1px solid var(--line-soft);background:var(--card-2);padding:cl
         <span class="svc-ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 005.4-5.4l-2.7 2.7-2-2 2.7-2.7z"/></svg></span>
         <h3>Reformas elétricas</h3><p>Adequação, modernização e reorganização de sistemas elétricos existentes.</p>
       </article>
-      <article class="svc reveal"><span class="idx mono">03</span>
+      <article class="svc reveal" id="svc-manutencao"><span class="idx mono">03</span>
         <span class="svc-ic"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg></span>
         <h3>Manutenção elétrica</h3><p>Manutenção preventiva e corretiva para evitar falhas, riscos e interrupções.</p>
       </article>
@@ -646,7 +648,7 @@ footer{border-top:1px solid var(--line-soft);background:var(--card-2);padding:cl
         <span class="svc-ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h4"/></svg></span>
         <h3>Entrada individual e coletiva</h3><p>Soluções para residências, condomínios e empreendimentos.</p>
       </article>
-      <article class="svc reveal"><span class="idx mono">07</span>
+      <article class="svc reveal" id="svc-automacao"><span class="idx mono">07</span>
         <span class="svc-ic"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 00-4 12c.8.8 1 1.3 1 2h6c0-.7.2-1.2 1-2A7 7 0 0012 2z"/></svg></span>
         <h3>Automação residencial</h3><p>Mais conforto, controle e tecnologia para ambientes modernos.</p>
       </article>
@@ -654,7 +656,7 @@ footer{border-top:1px solid var(--line-soft);background:var(--card-2);padding:cl
         <span class="svc-ic"><svg viewBox="0 0 24 24"><path d="M12 3v6M8 9h8l-1.5 7h-5L8 9z"/><path d="M10 20h4"/></svg></span>
         <h3>Luminotécnica</h3><p>Iluminação que valoriza ambientes com eficiência e sofisticação.</p>
       </article>
-      <article class="svc reveal"><span class="idx mono">09</span>
+      <article class="svc reveal" id="svc-paineis"><span class="idx mono">09</span>
         <span class="svc-ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h4M7 12h4M7 16h2M15 8v8"/><circle cx="17" cy="9" r="1"/></svg></span>
         <h3>Painéis elétricos</h3><p>Montagem de painéis elétricos, painéis de bombas de piscina e de recalque.</p>
       </article>
