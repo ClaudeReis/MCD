@@ -25,7 +25,7 @@
 <meta property="og:title" content="MCD Soluções Elétricas | Energia segura. Soluções precisas." />
 <meta property="og:description" content="Instalações, reformas, manutenções, automação e painéis elétricos com equipe qualificada e mais de 30 anos de experiência no Rio de Janeiro." />
 <meta property="og:url" content="https://www.mcdsolucoeseletricas.com.br/" />
-<meta property="og:image" content="https://www.mcdsolucoeseletricas.com.br/og-image.jpg" />
+<meta property="og:image" content="https://www.mcdsolucoeseletricas.com.br/assets/img/hero.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="MCD Soluções Elétricas | Energia segura. Soluções precisas." />
 <meta name="twitter:description" content="Soluções elétricas técnicas e especializadas no RJ. Mais de 30 anos de experiência. Profissionais CFT e CREA." />
@@ -46,7 +46,7 @@
   "@context": "https://schema.org",
   "@type": "Electrician",
   "name": "MCD Soluções Elétricas",
-  "image": "https://www.mcdsolucoeseletricas.com.br/og-image.jpg",
+  "image": "https://www.mcdsolucoeseletricas.com.br/assets/img/hero.jpg",
   "url": "https://www.mcdsolucoeseletricas.com.br/",
   "telephone": "+5521971448387",
   "email": "contato@mcdsolucoeseletricas.com.br",
@@ -54,6 +54,11 @@
   "description": "Empresa técnica especializada em soluções elétricas para residências, comércios, condomínios, construtoras e empresas no Rio de Janeiro, com mais de 30 anos de experiência e profissionais habilitados pelo CFT e CREA.",
   "priceRange": "$$",
   "foundingDate": "1994",
+  "founder": {
+    "@type": "Person",
+    "name": "Leandro Moncada",
+    "jobTitle": "Técnico em Eletrotécnica"
+  },
   "areaServed": [
     { "@type": "City", "name": "Rio de Janeiro" },
     { "@type": "State", "name": "Rio de Janeiro" }
@@ -262,9 +267,11 @@ header.scrolled{background:rgba(7,28,44,.82);backdrop-filter:blur(14px);border-b
   border:1px solid var(--line);overflow:hidden;
   box-shadow:0 40px 80px -30px rgba(0,0,0,.7);
 }
-.panel .scan{position:absolute;left:0;right:0;height:140px;background:linear-gradient(180deg,transparent,rgba(0,174,239,.10),transparent);animation:scan 6s var(--ease) infinite}
+.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.panel-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,28,44,.5) 0%,rgba(7,28,44,.05) 28%,rgba(7,28,44,.12) 60%,rgba(7,28,44,.62) 100%)}
+.panel .scan{position:absolute;left:0;right:0;height:140px;z-index:2;background:linear-gradient(180deg,transparent,rgba(0,174,239,.12),transparent);animation:scan 6s var(--ease) infinite;pointer-events:none}
 @keyframes scan{0%{top:-140px}100%{top:100%}}
-.spec-row{position:absolute;left:22px;right:22px;display:flex;justify-content:space-between;align-items:center;font-family:var(--f-mono);font-size:.74rem;color:var(--ink-soft)}
+.spec-row{position:absolute;left:22px;right:22px;z-index:3;display:flex;justify-content:space-between;align-items:center;font-family:var(--f-mono);font-size:.74rem;color:var(--white);text-shadow:0 1px 6px rgba(7,28,44,.9)}
 .spec-row .v{color:var(--cyan)}
 .years-seal{
   position:absolute;right:18px;bottom:18px;z-index:3;
@@ -346,13 +353,27 @@ header.scrolled{background:rgba(7,28,44,.82);backdrop-filter:blur(14px);border-b
 
 /* ─── SOBRE ─── */
 .about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,64px);align-items:center}
-.about-visual{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);background:linear-gradient(160deg,#0c2336,#081a29);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:30px}
-.about-card{display:flex;flex-direction:column;gap:18px;width:100%}
-.about-stat{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;border-radius:12px;background:rgba(0,174,239,.05);border:1px solid var(--line-soft)}
-.about-stat .k{font-size:.9rem;color:var(--ink-soft)}
-.about-stat .v{font-family:var(--f-mono);color:var(--cyan);font-weight:600;font-size:.95rem}
+.about-visual{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3}
+.about-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(7,28,44,.12),rgba(7,28,44,.6))}
+.about-badge{position:absolute;left:16px;bottom:16px;z-index:2;display:flex;gap:11px;align-items:center;background:rgba(7,28,44,.74);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:12px;padding:11px 15px}
+.about-badge .mono{color:var(--cyan);font-family:var(--f-mono);font-weight:600;font-size:.95rem}
+.about-badge .sep{color:var(--white);font-size:.85rem;border-left:1px solid var(--line-soft);padding-left:11px}
 .about p{color:var(--ink-soft);margin-top:18px;font-size:1.05rem}
 .about p+p{margin-top:14px}
+.founder{display:flex;align-items:center;gap:14px;margin-top:26px;padding:18px 20px;border-radius:var(--r-md);background:var(--card);border:1px solid var(--line-soft);border-left:3px solid var(--cyan)}
+.founder .av{width:48px;height:48px;border-radius:12px;background:rgba(0,174,239,.12);display:flex;align-items:center;justify-content:center;flex:none;font-family:var(--f-display);font-weight:700;color:var(--cyan);font-size:1.05rem}
+.founder .nm{font-family:var(--f-display);font-weight:600;color:#fff;font-size:1.08rem}
+.founder .rl{font-family:var(--f-mono);font-size:.74rem;color:var(--ink-soft);letter-spacing:.02em;margin-top:3px}
+
+/* ─── GALERIA DE OBRAS ─── */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.g-item{position:relative;margin:0;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line-soft);aspect-ratio:4/3;transition:transform .35s var(--ease),border-color .35s,box-shadow .35s}
+.g-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease)}
+.g-item figcaption{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:30px 16px 13px;font-size:.88rem;font-weight:500;color:#fff;background:linear-gradient(transparent,rgba(7,28,44,.9))}
+.g-item figcaption b{font-family:var(--f-mono);font-weight:600;color:var(--cyan);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;display:block;margin-bottom:3px}
+.g-item:hover{transform:translateY(-4px);border-color:var(--line);box-shadow:0 24px 50px -28px rgba(0,174,239,.45)}
+.g-item:hover img{transform:scale(1.06)}
 
 /* ─── CTA ORÇAMENTO ─── */
 .cta-band{position:relative;overflow:hidden;border-radius:var(--r-lg);padding:clamp(40px,6vw,68px);background:linear-gradient(135deg,var(--blue),#003a7a);border:1px solid rgba(0,174,239,.4);text-align:center}
@@ -427,6 +448,7 @@ footer{border-top:1px solid var(--line-soft);background:var(--card-2);padding:cl
   .foot-grid{grid-template-columns:1fr 1fr}
   .attr-grid{grid-template-columns:1fr}
   .proof-grid{grid-template-columns:repeat(2,1fr);gap:28px 16px}
+  .gallery{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:680px){
   .nav-links{display:none}
@@ -436,6 +458,7 @@ footer{border-top:1px solid var(--line-soft);background:var(--card-2);padding:cl
   .menu-btn{display:flex}
   .svc-grid{grid-template-columns:1fr}
   .aud-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:1fr}
   .diff-list{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr}
   .foot-bottom{flex-direction:column;align-items:flex-start}
@@ -467,6 +490,7 @@ footer{border-top:1px solid var(--line-soft);background:var(--card-2);padding:cl
       <a href="#servicos">Serviços</a>
       <a href="#diferenciais">Diferenciais</a>
       <a href="#como-funciona">Como funciona</a>
+      <a href="#obras">Obras</a>
       <a href="#sobre">Sobre</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
@@ -507,27 +531,12 @@ footer{border-top:1px solid var(--line-soft);background:var(--card-2);padding:cl
       </div>
     </div>
 
-    <div class="reveal hero-visual" aria-hidden="true">
+    <div class="reveal hero-visual">
       <div class="panel">
+        <img src="assets/img/hero.jpg" alt="Painel de comando elétrico montado pela MCD Soluções Elétricas, com sinaleiros e disjuntores" width="900" height="900" fetchpriority="high" />
+        <div class="panel-overlay"></div>
         <div class="scan"></div>
-        <div class="spec-row" style="top:26px"><span>TENSÃO</span><span class="v">220V · TRIFÁSICO</span></div>
-        <div class="spec-row" style="top:62px"><span>CARGA</span><span class="v">DIMENSIONADA</span></div>
-        <!-- mini diagrama de circuito -->
-        <svg viewBox="0 0 400 400" style="position:absolute;inset:0;width:100%;height:100%">
-          <g stroke="#00AEEF" stroke-width="1.6" fill="none" opacity=".55">
-            <path d="M60 130 H160 V210 H300"/>
-            <path d="M60 200 H120 V300 H260 V250"/>
-            <path d="M200 110 V180 H340"/>
-          </g>
-          <g fill="#00AEEF">
-            <circle cx="60" cy="130" r="4"/><circle cx="300" cy="210" r="4"/>
-            <circle cx="60" cy="200" r="4"/><circle cx="260" cy="250" r="4"/>
-            <circle cx="200" cy="110" r="4"/>
-          </g>
-          <circle cx="340" cy="180" r="5" fill="#FFB800"/>
-          <rect x="150" y="195" width="30" height="30" rx="4" fill="none" stroke="#FFB800" stroke-width="1.6"/>
-          <rect x="245" y="235" width="30" height="30" rx="4" fill="none" stroke="#00AEEF" stroke-width="1.6"/>
-        </svg>
+        <div class="spec-row" style="top:22px"><span>PAINEL DE COMANDO</span><span class="v">MCD · MONTAGEM</span></div>
         <div class="years-seal">
           <div class="n mono">+30</div>
           <div class="l">anos de experiência</div>
@@ -711,22 +720,48 @@ footer{border-top:1px solid var(--line-soft);background:var(--card-2);padding:cl
   <div class="wrap about">
     <div class="reveal">
       <span class="kicker">// A empresa</span>
-      <h2 style="font-size:clamp(1.9rem,3.7vw,2.85rem);margin-top:14px">MCD Soluções Elétricas</h2>
-      <p>Com mais de 30 anos de experiência no mercado, a MCD oferece soluções técnicas para instalações, reformas, manutenções e projetos elétricos especializados.</p>
-      <p>Atendemos residências, comércios, condomínios, construtoras, empresas e demandas técnicas de maior complexidade — sempre com foco em segurança, precisão e confiança.</p>
-      <p>A MCD combina experiência, equipe qualificada, profissionais habilitados pelo CFT e CREA, orçamento claro e garantia nos serviços executados.</p>
-      <div class="hero-ctas" style="margin-top:30px">
-        <a href="#" class="btn btn-primary" data-cta="whatsapp">Falar com a MCD</a>
+      <h2 style="font-size:clamp(1.9rem,3.7vw,2.85rem);margin-top:14px">Quem responde pela MCD</h2>
+      <p>À frente da MCD Soluções Elétricas está <b style="color:#fff">Leandro Moncada</b>, Técnico em Eletrotécnica com mais de 30 anos de experiência no setor — de instalações residenciais e prediais a projetos industriais, montagem de painéis, automação e sistemas de baixa tensão.</p>
+      <p>O compromisso é entregar cada serviço com segurança, qualidade e total conformidade com as normas técnicas, oferecendo soluções personalizadas para cada cliente, da pequena manutenção ao projeto completo.</p>
+      <p>Transparência, responsabilidade técnica e foco real na satisfação de quem confia o serviço — com profissionais habilitados pelo CFT e CREA.</p>
+      <div class="founder">
+        <span class="av">LM</span>
+        <div>
+          <div class="nm">Leandro Moncada</div>
+          <div class="rl">Técnico em Eletrotécnica · Responsável técnico (CFT/CREA)</div>
+        </div>
+      </div>
+      <div class="hero-ctas" style="margin-top:24px">
+        <a href="#" class="btn btn-primary" data-cta="whatsapp">Falar com o Leandro</a>
       </div>
     </div>
-    <div class="reveal about-visual" aria-hidden="true">
-      <div class="about-card">
-        <div class="about-stat"><span class="k">Experiência</span><span class="v">+30 anos</span></div>
-        <div class="about-stat"><span class="k">Habilitação técnica</span><span class="v">CFT · CREA</span></div>
-        <div class="about-stat"><span class="k">Atuação</span><span class="v">RESIDENCIAL → INDUSTRIAL</span></div>
-        <div class="about-stat"><span class="k">Orçamento</span><span class="v">CLARO · SEM SURPRESA</span></div>
-        <div class="about-stat"><span class="k">Entrega</span><span class="v">COM GARANTIA</span></div>
+    <div class="reveal about-visual">
+      <img src="assets/img/sobre.jpg" alt="Profissional da MCD Soluções Elétricas executando serviço técnico em painel de medição" width="900" height="680" loading="lazy" />
+      <div class="about-badge">
+        <span class="mono">+30 anos</span>
+        <span class="sep">CFT · CREA</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     OBRAS REALIZADAS (galeria)
+════════════════════════════════════════════════════════════════ -->
+<section class="section-pad" id="obras" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">// Obras realizadas</span>
+      <h2>Trabalhos que falam pela MCD</h2>
+      <p>Uma amostra de instalações, painéis e soluções entregues com padrão técnico, organização e segurança.</p>
+    </div>
+    <div class="gallery">
+      <figure class="g-item reveal"><img src="assets/img/obra-1.jpg" alt="Quadro de distribuição elétrica montado pela MCD" width="760" height="570" loading="lazy" /><figcaption><b>Instalação</b>Quadro de distribuição</figcaption></figure>
+      <figure class="g-item reveal"><img src="assets/img/obra-2.jpg" alt="Painel de medição e entrada coletiva em condomínio" width="760" height="570" loading="lazy" /><figcaption><b>Medição</b>Entrada coletiva — condomínio</figcaption></figure>
+      <figure class="g-item reveal"><img src="assets/img/obra-3.jpg" alt="Painel de comando para bomba de recalque" width="760" height="570" loading="lazy" /><figcaption><b>Painéis</b>Bomba de recalque</figcaption></figure>
+      <figure class="g-item reveal"><img src="assets/img/obra-4.jpg" alt="Carregador veicular e automação instalados pela MCD" width="760" height="570" loading="lazy" /><figcaption><b>Automação</b>Carga veicular e modernização</figcaption></figure>
+      <figure class="g-item reveal"><img src="assets/img/obra-5.jpg" alt="Luminotécnica com iluminação em escada" width="760" height="570" loading="lazy" /><figcaption><b>Luminotécnica</b>Iluminação de escada</figcaption></figure>
+      <figure class="g-item reveal"><img src="assets/img/obra-6.jpg" alt="Painel de comando montado com disjuntores e contatores" width="760" height="570" loading="lazy" /><figcaption><b>Painéis</b>Montagem de painel de comando</figcaption></figure>
     </div>
   </div>
 </section>

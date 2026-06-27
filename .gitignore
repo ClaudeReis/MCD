@@ -6,6 +6,12 @@ Audios contexto/
 # Estudo de mercado e estratégia (preços/concorrência internos)
 Oportunidades e Estudo de mercado/
 
+# Acervo bruto de fotos/vídeos do cliente (pesado) — só as versões web em assets/ vão pro repo
+Fotos e Videos Cliente/
+*.zip
+*.mp4
+*.mov
+
 # Documentos de marca / design source
 *.pptx
 *.docx
