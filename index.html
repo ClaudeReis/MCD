@@ -25,7 +25,7 @@
 <meta property="og:title" content="MCD Soluções Elétricas | Energia segura. Soluções precisas." />
 <meta property="og:description" content="Instalações, reformas, manutenções, automação e painéis elétricos com equipe qualificada e mais de 30 anos de experiência no Rio de Janeiro." />
 <meta property="og:url" content="https://www.mcdsolucoeseletricas.com.br/" />
-<meta property="og:image" content="https://www.mcdsolucoeseletricas.com.br/assets/img/hero.jpg" />
+<meta property="og:image" content="https://www.mcdsolucoeseletricas.com.br/assets/img/hero-leandro.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="MCD Soluções Elétricas | Energia segura. Soluções precisas." />
 <meta name="twitter:description" content="Soluções elétricas técnicas e especializadas no RJ. Mais de 30 anos de experiência. Profissionais CFT e CREA." />
@@ -46,7 +46,7 @@
   "@context": "https://schema.org",
   "@type": "Electrician",
   "name": "MCD Soluções Elétricas",
-  "image": "https://www.mcdsolucoeseletricas.com.br/assets/img/hero.jpg",
+  "image": "https://www.mcdsolucoeseletricas.com.br/assets/img/hero-leandro.jpg",
   "url": "https://www.mcdsolucoeseletricas.com.br/",
   "telephone": "+5521971448387",
   "email": "contato@mcdsolucoeseletricas.com.br",
@@ -251,35 +251,34 @@ header.scrolled{background:rgba(7,28,44,.82);backdrop-filter:blur(14px);border-b
 .menu-btn svg{width:24px;height:24px;stroke:var(--white)}
 
 /* ─── HERO ─── */
-.hero{padding:clamp(54px,8vw,96px) 0 clamp(60px,9vw,104px);position:relative;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(34px,5vw,72px);align-items:center}
-.hero h1{font-size:clamp(2.3rem,5.4vw,4rem);font-weight:700;letter-spacing:-.035em}
-.hero h1 .hl{color:var(--cyan)}
-.hero-sub{margin-top:24px;font-size:clamp(1.05rem,1.6vw,1.22rem);color:var(--ink-soft);max-width:54ch}
-.hero-ctas{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
-.hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px;padding-top:30px;border-top:1px solid var(--line-soft)}
-
-/* visual técnico do hero */
-.hero-visual{position:relative;aspect-ratio:1/1;max-width:520px;margin-inline:auto;width:100%}
-.panel{
-  position:absolute;inset:0;border-radius:var(--r-lg);
-  background:linear-gradient(160deg,#0c2336,#081a29);
-  border:1px solid var(--line);overflow:hidden;
-  box-shadow:0 40px 80px -30px rgba(0,0,0,.7);
-}
-.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.panel-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,28,44,.5) 0%,rgba(7,28,44,.05) 28%,rgba(7,28,44,.12) 60%,rgba(7,28,44,.62) 100%)}
-.panel .scan{position:absolute;left:0;right:0;height:140px;z-index:2;background:linear-gradient(180deg,transparent,rgba(0,174,239,.12),transparent);animation:scan 6s var(--ease) infinite;pointer-events:none}
-@keyframes scan{0%{top:-140px}100%{top:100%}}
-.spec-row{position:absolute;left:22px;right:22px;z-index:3;display:flex;justify-content:space-between;align-items:center;font-family:var(--f-mono);font-size:.74rem;color:var(--white);text-shadow:0 1px 6px rgba(7,28,44,.9)}
-.spec-row .v{color:var(--cyan)}
-.years-seal{
-  position:absolute;right:18px;bottom:18px;z-index:3;
-  background:rgba(7,28,44,.7);backdrop-filter:blur(6px);
-  border:1px solid var(--amber);border-radius:14px;padding:14px 18px;text-align:right;
-}
-.years-seal .n{font-family:var(--f-display);font-weight:700;font-size:2rem;color:#fff;line-height:1}
-.years-seal .l{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;color:var(--amber);text-transform:uppercase;margin-top:4px}
+.hero{position:relative;min-height:clamp(620px,90vh,860px);display:flex;flex-direction:column;overflow:hidden;padding:0}
+.hero-photo{position:absolute;top:0;right:0;width:60%;height:100%;object-fit:cover;object-position:42% center;z-index:0}
+.hero-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;background:
+  linear-gradient(90deg, var(--navy) 0%, rgba(7,28,44,.98) 28%, rgba(7,28,44,.6) 45%, rgba(7,28,44,.12) 62%, rgba(7,28,44,0) 78%),
+  linear-gradient(180deg, transparent 60%, rgba(7,28,44,.72) 100%)}
+.hero-inner{position:relative;z-index:2;flex:1;display:flex;align-items:center;width:100%;padding:48px 0 36px}
+.hero-copy{max-width:580px}
+.hero-title{font-size:clamp(2.5rem,5.6vw,4.7rem);font-weight:700;line-height:1.02;letter-spacing:-.04em;display:flex;flex-direction:column}
+.hero-title .b{color:var(--cyan)}
+.hero-title .a{color:var(--amber)}
+.hero-accent{width:118px;height:2px;background:linear-gradient(90deg,var(--amber),transparent);margin:22px 0 0;border:0}
+.hero-sub{margin-top:22px;font-size:clamp(1.02rem,1.5vw,1.18rem);color:var(--ink-soft);max-width:46ch}
+.hero-ctas{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+.hero-quick{display:flex;margin-top:34px;flex-wrap:wrap}
+.hero-quick a{display:flex;flex-direction:column;align-items:center;gap:9px;padding:0 22px;color:var(--ink-soft);font-size:.85rem;line-height:1.25;text-align:center;font-weight:500;transition:color .2s;position:relative}
+.hero-quick a+a::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:1px;background:var(--line-soft)}
+.hero-quick a:hover{color:#fff}
+.hero-quick .qi{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:11px;background:rgba(0,174,239,.1);border:1px solid var(--line-soft)}
+.hero-quick .qi svg{width:21px;height:21px;stroke:var(--cyan);fill:none;stroke-width:1.6}
+/* barra de confiança */
+.hero-trust{position:relative;z-index:2;border-top:1px solid var(--line);background:linear-gradient(rgba(7,28,44,0),rgba(7,28,44,.45))}
+.hero-trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:18px 0}
+.hero-trust-item{display:flex;align-items:center;gap:12px;position:relative}
+.hero-trust-item+.hero-trust-item::before{content:"";position:absolute;left:-8px;top:3px;bottom:3px;width:1px;background:var(--line-soft)}
+.hero-trust-item .ti{width:32px;height:32px;flex:none;display:flex;align-items:center;justify-content:center}
+.hero-trust-item .ti svg{width:24px;height:24px;stroke:var(--cyan);fill:none;stroke-width:1.5}
+.hero-trust-item b{display:block;color:#fff;font-size:.92rem;font-family:var(--f-display);font-weight:600}
+.hero-trust-item span{font-size:.79rem;color:var(--ink-soft)}
 
 /* faixa de prova social */
 .proof{border-block:1px solid var(--line-soft);background:rgba(13,32,49,.5)}
@@ -439,8 +438,9 @@ footer{border-top:1px solid var(--line-soft);background:var(--card-2);padding:cl
    RESPONSIVO
 ════════════════════════════════════════════════════════════════ */
 @media (max-width:960px){
-  .hero-grid{grid-template-columns:1fr;text-align:left}
-  .hero-visual{order:-1;max-width:380px}
+  .hero-photo{width:100%;object-position:64% center}
+  .hero-overlay{background:linear-gradient(180deg,rgba(7,28,44,.5) 0%,rgba(7,28,44,.8) 52%,rgba(7,28,44,.95) 100%)}
+  .hero-trust-grid{grid-template-columns:repeat(2,1fr);gap:14px 24px}
   .svc-grid{grid-template-columns:repeat(2,1fr)}
   .aud-grid{grid-template-columns:repeat(3,1fr)}
   .diff-wrap,.about{grid-template-columns:1fr}
@@ -451,6 +451,12 @@ footer{border-top:1px solid var(--line-soft);background:var(--card-2);padding:cl
   .gallery{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:680px){
+  .hero{min-height:auto}
+  .hero-inner{padding:36px 0 30px}
+  .hero-title{font-size:clamp(2.4rem,12vw,3.1rem)}
+  .hero-quick{margin-top:26px}
+  .hero-quick a{padding:0 14px;font-size:.78rem}
+  .hero-quick .qi{width:36px;height:36px}
   .nav-links{display:none}
   .nav-links.show{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:rgba(7,28,44,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:8px 24px 18px}
   .nav-links.show a{width:100%;padding:13px 0;border-bottom:1px solid var(--line-soft)}
@@ -512,36 +518,45 @@ footer{border-top:1px solid var(--line-soft);background:var(--card-2);padding:cl
      HERO
 ════════════════════════════════════════════════════════════════ -->
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div class="reveal">
-      <span class="badge"><span class="dot"></span>+30 anos de engenharia elétrica no RJ</span>
-      <h1 style="margin-top:22px">Soluções elétricas especializadas com <span class="hl">segurança e precisão</span></h1>
-      <p class="hero-sub">Instalações, reformas, manutenções, automação residencial, luminotécnica e painéis elétricos. Equipe qualificada, orçamento claro e garantia em cada serviço.</p>
-      <div class="hero-ctas">
-        <a href="#" class="btn btn-primary btn-lg" data-cta="whatsapp">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.058zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-          Solicitar orçamento
-        </a>
-        <a href="#servicos" class="btn btn-ghost btn-lg">Conhecer serviços</a>
-      </div>
-      <div class="hero-badges">
-        <span class="badge"><span class="dot"></span>CFT e CREA</span>
-        <span class="badge"><span class="dot"></span>Orçamento claro</span>
-        <span class="badge"><span class="dot"></span>Garantia nos serviços</span>
+  <img class="hero-photo" src="assets/img/hero-leandro.jpg" alt="Leandro Moncada, responsável técnico da MCD Soluções Elétricas, instalando disjuntores em um painel elétrico" width="1600" height="900" fetchpriority="high" />
+  <div class="hero-overlay"></div>
+
+  <div class="hero-inner">
+    <div class="wrap">
+      <div class="hero-copy reveal">
+        <h1 class="hero-title">
+          <span>Energia</span>
+          <span class="b">segura.</span>
+          <span>Soluções</span>
+          <span class="a">precisas.</span>
+        </h1>
+        <hr class="hero-accent" />
+        <p class="hero-sub">Instalações, manutenções, painéis elétricos, automação residencial e soluções técnicas com padrão profissional.</p>
+        <div class="hero-ctas">
+          <a href="#" class="btn btn-primary btn-lg" data-cta="whatsapp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+            Solicitar orçamento
+          </a>
+          <a href="#servicos" class="btn btn-ghost btn-lg">Ver serviços
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <nav class="hero-quick" aria-label="Atalhos de serviços">
+          <a href="#servicos"><span class="qi"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg></span>Instalações</a>
+          <a href="#servicos"><span class="qi"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg></span>Manutenções</a>
+          <a href="#servicos"><span class="qi"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h4"/></svg></span>Painéis<br>elétricos</a>
+          <a href="#servicos"><span class="qi"><svg viewBox="0 0 24 24"><path d="M4 12l8-7 8 7M6 11v8h12v-8"/><path d="M10 16.4a3 3 0 014 0M12 19h.01"/></svg></span>Automação<br>residencial</a>
+        </nav>
       </div>
     </div>
+  </div>
 
-    <div class="reveal hero-visual">
-      <div class="panel">
-        <img src="assets/img/hero.jpg" alt="Painel de comando elétrico montado pela MCD Soluções Elétricas, com sinaleiros e disjuntores" width="900" height="900" fetchpriority="high" />
-        <div class="panel-overlay"></div>
-        <div class="scan"></div>
-        <div class="spec-row" style="top:22px"><span>PAINEL DE COMANDO</span><span class="v">MCD · MONTAGEM</span></div>
-        <div class="years-seal">
-          <div class="n mono">+30</div>
-          <div class="l">anos de experiência</div>
-        </div>
-      </div>
+  <div class="hero-trust">
+    <div class="wrap hero-trust-grid">
+      <div class="hero-trust-item"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></span><div><b>Segurança</b><span>em cada detalhe</span></div></div>
+      <div class="hero-trust-item"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></span><div><b>Precisão</b><span>que gera confiança</span></div></div>
+      <div class="hero-trust-item"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="6"/><path d="M9 13.5L8 22l4-2 4 2-1-8.5"/></svg></span><div><b>Especialização</b><span>técnica comprovada</span></div></div>
+      <div class="hero-trust-item"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></svg></span><div><b>Tecnologia</b><span>e eficiência</span></div></div>
     </div>
   </div>
 </section>
