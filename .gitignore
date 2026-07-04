@@ -24,3 +24,16 @@ Design System MDC Solucoes Eletricas.md
 Thumbs.db
 .DS_Store
 desktop.ini
+
+.vercel
+
+# Acervo bruto de fotos para produção do site (pesado, contém documento pessoal/CREA) — só as versões web em assets/ vão pro repo
+Fotos para o Site/
+
+# Propostas e materiais comerciais — nunca publicar
+Proposta/
+
+# Documentos internos do projeto (estratégia, GMN, checklist de indexação)
+PRODUCT.md
+Google Meu Negocio - MCD.md
+Indexação Site/
