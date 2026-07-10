@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mcd-solucoes-eletricas.vercel.app/sitemap.xml
+Sitemap: https://www.mcdsolucoeseletricas.com.br/sitemap.xml
