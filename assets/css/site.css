@@ -376,6 +376,8 @@ footer{border-top:1px solid var(--line-soft);background:var(--card-2);padding:cl
 .foot-col ul{list-style:none;padding:0;margin:0}
 .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:42px;padding-top:24px;border-top:1px solid var(--line-soft);color:var(--ink-faint);font-size:.85rem}
 .foot-note{font-family:var(--f-mono);font-size:.78rem;color:var(--amber)}
+.foot-credit a{color:var(--ink-faint);font-weight:600;transition:color .2s}
+.foot-credit a:hover{color:var(--cyan)}
 
 /* ─── WHATSAPP FLUTUANTE + CHATBOT ─── */
 .fab{position:fixed;right:22px;bottom:22px;z-index:var(--z-overlay);display:flex;flex-direction:column;align-items:flex-end;gap:14px}
