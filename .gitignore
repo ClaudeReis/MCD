@@ -17,6 +17,9 @@ Fotos e Videos Cliente/
 *.docx
 *.pdf
 *.png
+!favicon-48x48.png
+!favicon-96x96.png
+!apple-touch-icon.png
 logo-concepts-mdc.html
 Design System MDC Solucoes Eletricas.md
 
