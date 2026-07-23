@@ -2,11 +2,11 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         { "type": "host", "value": "mcd-solucoes-eletricas.vercel.app" }
       ],
-      "destination": "https://www.mcdsolucoeseletricas.com.br/:path*",
+      "destination": "https://www.mcdsolucoeseletricas.com.br/$1",
       "permanent": true
     },
     {
