@@ -145,6 +145,7 @@ header.scrolled{background:rgba(7,28,44,.82);backdrop-filter:blur(14px);border-b
 .hero-title{font-size:clamp(2.5rem,5.6vw,4.7rem);font-weight:700;line-height:1.02;letter-spacing:-.04em;display:flex;flex-direction:column}
 .hero-title .b{color:var(--cyan)}
 .hero-title .a{color:var(--amber)}
+.hero-kicker{font-size:.82rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;line-height:1.3;color:var(--ink-soft);margin-bottom:16px}
 .hero-accent{width:118px;height:2px;background:linear-gradient(90deg,var(--amber),transparent);margin:22px 0 0;border:0}
 .hero-sub{margin-top:22px;font-size:clamp(1.02rem,1.5vw,1.18rem);color:var(--ink-soft);max-width:46ch}
 .hero-ctas{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}

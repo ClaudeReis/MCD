@@ -38,7 +38,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
 <!-- Preload da imagem do hero (otimiza LCP) -->
-<link rel="preload" as="image" href="assets/img/hero-leandro.jpg" fetchpriority="high" />
+<link rel="preload" as="image" href="assets/img/hero-leandro.webp" fetchpriority="high" />
 
 <!-- Favicon -->
 <link rel="icon" href="/favicon.ico" sizes="32x32" />
@@ -103,6 +103,23 @@
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Luminotécnica" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Painéis elétricos" } }
     ]
+  }
+}
+</script>
+<!-- Nome do site: sem este bloco o Google rotula os resultados com o nome do host (Vercel) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "MCD Soluções Elétricas",
+  "alternateName": "MCD",
+  "url": "https://www.mcdsolucoeseletricas.com.br/",
+  "inLanguage": "pt-BR",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MCD Soluções Elétricas",
+    "url": "https://www.mcdsolucoeseletricas.com.br/",
+    "logo": "https://www.mcdsolucoeseletricas.com.br/apple-touch-icon.png"
   }
 }
 </script>
@@ -171,13 +188,14 @@
      HERO
 ════════════════════════════════════════════════════════════════ -->
 <section class="hero">
-  <img class="hero-photo" src="assets/img/hero-leandro.jpg" alt="Leandro Moncada, responsável técnico da MCD Soluções Elétricas, instalando disjuntores em um painel elétrico" width="1600" height="900" fetchpriority="high" />
+  <img class="hero-photo" src="assets/img/hero-leandro.webp" alt="Leandro Moncada, responsável técnico da MCD Soluções Elétricas, instalando disjuntores em um painel elétrico" width="1600" height="900" fetchpriority="high" />
   <div class="hero-overlay"></div>
 
   <div class="hero-inner">
     <div class="wrap">
       <div class="hero-copy reveal">
         <h1 class="hero-title">
+          <span class="hero-kicker">Eletricista técnico no Rio de Janeiro</span>
           <span>Energia</span>
           <span class="b">segura.</span>
           <span>Soluções</span>
@@ -417,7 +435,7 @@
       </div>
     </div>
     <div class="reveal about-visual">
-      <img src="assets/img/sobre.jpg" alt="Leandro Moncada, responsável técnico da MCD Soluções Elétricas, com EPI diante de um painel elétrico" width="1080" height="1349" loading="lazy" />
+      <img src="assets/img/sobre.webp" alt="Leandro Moncada, responsável técnico da MCD Soluções Elétricas, com EPI diante de um painel elétrico" width="1080" height="1349" loading="lazy" />
       <div class="about-badge">
         <span class="mono">+30 anos</span>
         <span class="sep">CFT · CREA</span>
