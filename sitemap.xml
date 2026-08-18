@@ -50,8 +50,14 @@
   </url>
   <url>
     <loc>https://www.mcdsolucoeseletricas.com.br/blog/index.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mcdsolucoeseletricas.com.br/blog/luz-piscando-em-casa.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
