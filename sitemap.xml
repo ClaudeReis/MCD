@@ -50,8 +50,14 @@
   </url>
   <url>
     <loc>https://www.mcdsolucoeseletricas.com.br/blog/index.html</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mcdsolucoeseletricas.com.br/blog/eletricista-ipanema-predios-antigos.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
